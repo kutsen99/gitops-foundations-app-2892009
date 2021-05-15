@@ -20,7 +20,7 @@ jobs:
       # build and push Docker image
       - run: |
           TAG=3.0
-          docker build -t $DOCKERHUB_USERNAME/gitops-foundations:$TAG --build-arg JAR_FILE*.jar .
+          docker build -t $DOCKERHUB_USERNAME/gitops-foundations:$TAG --build-arg JAR_FILE=gitops-foundations-2.0.0.RELEASE.jar .
           echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
           docker push $DOCKERHUB_USERNAME/gitops-foundations:$TAG
 workflows:
