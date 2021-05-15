@@ -9,7 +9,7 @@ jobs:
           password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
-      - run: ./mvnw -Dmaven.test.skip=true package
+      - run: ./mvnw -Dmaven.test.skip=true clean package
       - persist_to_workspace:
          root: ./
          paths:
