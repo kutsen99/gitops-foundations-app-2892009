@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: gitops-foundations
-        image: qsharker/gitops-foundations:3.0
+        image: qsharker/gitops-foundations:1.0.0.RELEASE
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
