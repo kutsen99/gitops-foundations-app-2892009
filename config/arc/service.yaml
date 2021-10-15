@@ -4,10 +4,11 @@ metadata:
   name: gitops-foundations
   namespace: arc-exercise
 spec:
-  type: NodePort
   selector:
-    app: gitops-foundations 
+    app: gitops-foundations
   ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 30000
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: web
+  type: LoadBalancer
