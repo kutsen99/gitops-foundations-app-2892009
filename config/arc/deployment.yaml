@@ -18,7 +18,7 @@ spec:
       containers:
       - name: gitops-foundations
         image: qsharker/gitops-foundations:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         livenessProbe:
