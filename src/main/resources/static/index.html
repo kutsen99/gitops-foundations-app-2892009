@@ -6,11 +6,28 @@
 
 <!-- Bootstrap CSS -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<title>LinkedIn Learning Gitops!</title>
+<script>
+	window.onload=function(){
+		setInterval(function(){
+			fetch('/info')
+			.then(response => response.text())
+			.then(data => document.getElementById("hostname")
+			.textContent = data);
+		},5000);
+
+	}
+</script>
 </head>
 <body>
 <body>
 	<div class="px-4 py-5 my-5 text-center">
 		<h1 class="display-5 fw-bold">GitOps Foundations</h1>
+		<div class="mx-auto m-4">
+			<h3>System Hostname</h3>
+			<span id="hostname">Unknown</span>
+		</div>
 			<div class="mx-auto m-4">
 			<h3>Version</h3>
 			<span id="version">2.0.0</span>
