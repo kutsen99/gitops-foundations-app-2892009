@@ -6,7 +6,7 @@ metadata:
   labels:
     app: gitops-foundations
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: gitops-foundations
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: gitops-foundations
-        image: qsharker/gitops-foundations:3.0.0.RELEASE
+        image: qsharker/gitops-foundations:4.0.0.RELEASE
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
